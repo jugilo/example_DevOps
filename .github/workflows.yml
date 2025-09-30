@@ -4,4 +4,4 @@ jobs:
   hello_world:
     runs-on: ubuntu-latest
     seteps:
-      - run: echo "hello words"
+      - run: python3 --version
