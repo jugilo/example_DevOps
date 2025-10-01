@@ -3,5 +3,5 @@ on: [workflow_dispatch]
 jobs:
   hello_world:
     runs-on: ubuntu-latest
-    seteps:
-      - run: python3 ./main.py
+    steps:
+      - run: python3 main.py
