@@ -11,7 +11,7 @@ jobs:
         env:
           ssh_keys: ${{secrets.SSH_KEY}}
         run:
-          echo "$ssh_key" > key.pem
+          echo "$SSH_KEY" > key.pem
           chmod 600 key.pem
     
       - name: SSH Conection
