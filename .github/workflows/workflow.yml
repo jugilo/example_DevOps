@@ -4,4 +4,16 @@ jobs:
   hello_world:
     runs-on: ubuntu-latest
     steps:
-      - run: ../main.py
+      - name: Clonar repositorio
+        user: actions/checkout@v3
+
+      - name: Crear clave SSH
+        env:
+          ssh_keys: ${{secrets.SSH_KEY}}
+        run:
+          echo "$ssh_key" > key.pem
+          chmod 600 key.pem
+      - run: ls -la
+      - run: cat key.pem
+
+      
