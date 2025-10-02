@@ -21,6 +21,6 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           port: 22
-          script: ls
+          script: sudo docker run -p 3001:3000 --name:grafanax grafana/grafana
 
       
